@@ -11,7 +11,7 @@ export const TodoList = () => {
         {' '}
         {toDos.map(({ text, id }, index) => (
           <GridItem key={id}>
-            <Todo text={text} counter={index + 1} />
+            <Todo text={text} counter={index + 1} id={id} />
           </GridItem>
         ))}{' '}
       </Grid>

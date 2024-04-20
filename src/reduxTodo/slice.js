@@ -11,11 +11,10 @@ const toDoSlice = createSlice({
     addTodos: (state, action) => {
       state.todos.items.push(action.payload);
     },
-    deleteTodos: state => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    deleteTodos: (state, action) => {
+      state.todos.items = state.todos.items.filter(
+        todo => todo.id !== action.payload,
+      );
     },
   },
 });
