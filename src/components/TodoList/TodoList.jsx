@@ -2,7 +2,7 @@ import { Text, GridItem, Grid, Todo } from 'components';
 import { useSelector } from 'react-redux';
 
 export const TodoList = () => {
-  const toDos = useSelector(state => state.toDo.todos.items);
+  const toDos = useSelector(state => state.todos.todos.items);
   console.log(toDos);
   return (
     <>
